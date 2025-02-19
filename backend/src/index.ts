@@ -6,7 +6,7 @@ const app = new Hono();
 
 app.use("/*", cors());
 
-app.get("/", (c) => {
+app.get("/api/hello", (c) => {
     return c.text("Hello Hono!");
 });
 

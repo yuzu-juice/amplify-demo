@@ -7,15 +7,11 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(
-                    "https://510f-240d-2-1709-3600-b18b-5fbf-fd2c-3b9a.ngrok-free.app/",
-                    {
-                        headers: {
-                            "ngrok-skip-browser-warning":
-                                "skip-browser-warning",
-                        },
-                    }
-                );
+                const response = await fetch("/api/hello", {
+                    headers: {
+                        "ngrok-skip-browser-warning": "skip-browser-warning",
+                    },
+                });
                 const text = await response.text();
                 setData(text);
             } catch (err) {
